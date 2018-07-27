@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-control" content="no-cache">
+
+    <title>WEBminiTouringMachine</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css"/>
+    <script src="app.js"></script>
+
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+
+</head>
+<body>
+
+<div id="welcome-content" class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <h1>WEB Mini Touring Machine</h1>
+            <h6>by dusinski</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10">
+            Welcome in WEB Mini Touring Machine: Give two input numbers, click start and see how Mini Touring Machine does its operations.<br>
+            For each step you can see how the tape looks like, the number of actual state, head position on a tape and the actual step number.<br>
+            @ tape @ actual_state @ head_position @ step_number <br>
+            In the last line you can see decimal result and time of each operation in ms (each step takes 1 ms)<br><br>
+        </div>
+    </div>
+</div>
+
+
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <form>
+                <div class="form-group">
+                    <label for="firstNumber">What is the first number?</label>
+                    <input type="text" id="firstNumber" class="form-control">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10">
+            <form>
+                <div class="form-group">
+                    <label for="secondNumber">What is the second number?</label>
+                    <input type="text" id="secondNumber" class="form-control">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+        <button id="send" class="bnt bnt-default" type="submit">Start</button>
+        <button id="clear" class="bnt bnt-default" type="submit">Clear</button>
+        </div>
+    </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <table id="additionTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Addition</th>
+                </tr>
+                </thead>
+                <tbody id="addition">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="subtractionTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Subtraction</th>
+                </tr>
+                </thead>
+                <tbody id="subtraction">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="multiplicationTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Multiplication</th>
+                </tr>
+                </thead>
+                <tbody id="multiplication">
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-3">
+            <table id="divisionTable" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Division</th>
+                </tr>
+                </thead>
+                <tbody id="division">
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>
